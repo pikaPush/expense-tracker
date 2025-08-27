@@ -23,8 +23,8 @@ function addTransaction(e) {
   });
 
   localStorage.setItem("transactions", JSON.stringify(transactions));
-  
-  updateTransactionList()
+
+  updateTransactionList();
   updateSummary();
 
   transactionFormEl.reset();
@@ -35,22 +35,21 @@ function updateTransactionList() {
 
   const sortedTransactions = [...transactions].reverse();
   sortedTransactions.forEach((transaction) => {
-    const transactionEl = createTransactionElement(transaction)
+    const transactionEl = createTransactionElement(transaction);
     transactionListEl.appendChild(transactionEl);
-  })
+  });
 }
 
 function createTransactionElement(transaction) {
   const li = document.createElement("li");
-  li.classList.add("transaction")
+  li.classList.add("transaction");
   li.classList.add(transaction.amount > 0 ? "income" : "expenses");
   li.innerHTML = `
   <span>${transaction.description}</span>
   <span>${transaction.amount}
-    <button class="delete-btn" onclick="removeTransaction(${transaction.id})"></button>
+    <button class="delete-btn" onclick="removeTransaction(${transaction.id})">×</button>
   </span>
   `;
 
   return li;
 }
-
