@@ -124,3 +124,25 @@ h2 {
   padding-right: 8px;
   flex-grow: 1;
 }
+
+/* SCROLL BAR */
+
+.transaction-container #transaction-lists::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transaction-container #transaction-lists::-webkit-scrollbar-track {
+  /* BACKGROUND OF THE SCROLL BAR */
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.transaction-container #transaction-lists::-webkit-scrollbar-thumb {
+  /* DRAGGABLE PART OF SCROLL BAR */
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.transaction-container #transaction-lists::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
