@@ -205,3 +205,9 @@ h2 {
 .delete-btn {
   opacity: 1;
 }
+
+.transaction,
+.delete-btn:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
