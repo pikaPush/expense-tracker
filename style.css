@@ -69,3 +69,11 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
+
+.summary .income,
+.summary .expenses {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
