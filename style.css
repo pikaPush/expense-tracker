@@ -27,7 +27,7 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.container h1 {
+h1 {
   text-align: center;
   color: #1a202c;
   margin-bottom: 30px;
@@ -40,4 +40,13 @@ h2 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+
+.container .balance-container {
+  background: linear-gradient(135deg, #2e8b57, #a8d5ba);
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
