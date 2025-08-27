@@ -251,6 +251,12 @@ form input {
   outline: none;
 }
 
+form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
 form small {
   margin-left: 5px;
   color: #4a5568;
