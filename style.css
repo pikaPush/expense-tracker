@@ -212,6 +212,8 @@ h2 {
   transform: scale(1.1);
 }
 
+/* FORM */
+
 .form-container {
   background: linear-gradient(135deg, #f6f8fb, #f1f4f8);
   padding: 1.5rem;
@@ -272,6 +274,7 @@ form small {
   color: #4a5568;
 }
 
+/* BUTTON */
 form button[type="submit"] {
   background-color: #03ae78;
   color: #fff;
@@ -292,4 +295,52 @@ form button[type="submit"]:hover {
 
 form button[type="submit"]:active {
   transform: translateY(0);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  #transaction-lists {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px;
+    min-width: 400px;
+  }
+
+  .balance-container {
+    min-width: 350px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .balance-container #balance {
+    font-size: 2.5rem;
+  }
+
+  .balance-container h3 {
+    font-size: 1.25rem;
+  }
+
+  .income p,
+  .expenses p {
+    font-size: 18px;
+  }
+
+  .transaction {
+    padding: 14px 16px;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
 }
