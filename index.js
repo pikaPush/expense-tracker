@@ -21,4 +21,13 @@ function addTransaction(e) {
     description,
     amount,
   });
+
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+  
+  updateTransactionList()
+  updateSummary();
+
+  transactionFormEl.reset();
 }
+
+
