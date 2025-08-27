@@ -46,8 +46,10 @@ function createTransactionElement(transaction) {
   li.classList.add(transaction.amount > 0 ? "income" : "expenses");
   li.innerHTML = `
   <span>${transaction.description}</span>
-  <span>${transaction.amount}
-    <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
+  <span>${formatCurrency(transaction.amount)}
+    <button class="delete-btn" onclick="removeTransaction(${
+      transaction.id
+    })">x</button>
   </span>
   `;
 
@@ -79,6 +81,15 @@ function formatCurrency(number) {
     style: "currency",
     currency: "PHP",
   }).format(number);
+}
+
+function removeTransaction(id) {
+  transactions = transactions.filter((transaction) => transaction.id !== id);
+
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+
+  updateTransactionList();
+  updateSummary();
 }
 
 updateTransactionList();
