@@ -298,8 +298,8 @@ form button[type="submit"]:active {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 768px) {
-  .main-content {
+@media (max-width: 900px) {
+  .container .main-content {
     grid-template-columns: 1fr;
   }
 
@@ -314,11 +314,11 @@ form button[type="submit"]:active {
     min-width: 400px;
   }
 
-  .balance-container {
+  .container .balance-container {
     min-width: 350px;
   }
 
-  .summary {
+  .balance-container .summary {
     grid-template-columns: 1fr;
     gap: 16px;
   }
