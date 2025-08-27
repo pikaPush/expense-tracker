@@ -272,7 +272,7 @@ form small {
   color: #4a5568;
 }
 
-form button {
+form button[type="submit"] {
   background-color: #03ae78;
   color: #fff;
   padding: 8px 16px;
@@ -283,4 +283,13 @@ form button {
   font-weight: 500;
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
   transition: all 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+form button[type="submit"]:active {
+  transform: translateY(0);
 }
