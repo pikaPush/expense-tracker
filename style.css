@@ -246,4 +246,6 @@ form input {
   border: 2px solid #e2e8f0;
   transition: all 0.3s ease;
   background-color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
