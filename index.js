@@ -80,3 +80,6 @@ function formatCurrency(number) {
     currency: "PHP",
   }).format(number);
 }
+
+updateTransactionList();
+updateSummary();
