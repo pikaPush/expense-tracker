@@ -248,4 +248,5 @@ form input {
   background-color: #fff;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
+  outline: none;
 }
