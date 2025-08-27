@@ -55,20 +55,28 @@ function createTransactionElement(transaction) {
 }
 
 function updateSummary() {
-  const balance = transactions.reduce((acc, transaction) => {
-    acc + transaction.amount;
-  }, 0);
+  const balance = transactions.reduce(
+    (acc, transaction) => acc + transaction.amount,
+    0
+  );
 
   const income = transactions
     .filter((transaction) => transaction.amount > 0)
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
   const expenses = transactions
-    .filter((transaction) => transaction.amount > 0)
+    .filter((transaction) => transaction.amount < 0)
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
   // UPDATE UI
-  balanceEl.textContent = balance;
-  incomeAmountEl.textContent = income;
-  expensesAmountEl.textContent = expenses;
+  balanceEl.textContent = formatCurrency(balance);
+  incomeAmountEl.textContent = formatCurrency(income);
+  expensesAmountEl.textContent = formatCurrency(expenses);
+}
+
+function formatCurrency(number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "PHP",
+  }).format(number);
 }
