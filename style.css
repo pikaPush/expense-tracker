@@ -175,3 +175,15 @@ h2 {
   }
 }
 
+.transaction:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.transaction.income {
+  border-right-color: #059669;
+}
+
+.transaction.expenses {
+  border-right-color: #ff3a3a;
+}
