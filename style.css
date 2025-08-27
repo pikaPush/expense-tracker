@@ -308,7 +308,7 @@ form button[type="submit"]:active {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .container {
     padding: 24px;
     min-width: 400px;
