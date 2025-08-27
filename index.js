@@ -47,9 +47,28 @@ function createTransactionElement(transaction) {
   li.innerHTML = `
   <span>${transaction.description}</span>
   <span>${transaction.amount}
-    <button class="delete-btn" onclick="removeTransaction(${transaction.id})">×</button>
+    <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
   </span>
   `;
 
   return li;
+}
+
+function updateSummary() {
+  const balance = transactions.reduce((acc, transaction) => {
+    acc + transaction.amount;
+  }, 0);
+
+  const income = transactions
+    .filter((transaction) => transaction.amount > 0)
+    .reduce((acc, transaction) => acc + transaction.amount, 0);
+
+  const expenses = transactions
+    .filter((transaction) => transaction.amount > 0)
+    .reduce((acc, transaction) => acc + transaction.amount, 0);
+
+  // UPDATE UI
+  balanceEl.textContent = balance;
+  incomeAmountEl.textContent = income;
+  expensesAmountEl.textContent = expenses;
 }
