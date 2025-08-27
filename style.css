@@ -251,10 +251,20 @@ form input {
   outline: none;
 }
 
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 form input:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+form input:hover {
+  background-color: #cbd5e0;
 }
 
 form small {
